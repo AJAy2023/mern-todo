@@ -1,12 +1,12 @@
     const zod  =  require("zod");
     
-    const createTodo = Zod.object({
-        title:Zod.string(),
+    const createTodo = zod.object({
+        title:zod.string(),
         description : zod.string()
     })
     
-    const updateTodo = Zod.object({
-        id : Zod.string(),
+    const updateTodo = zod.object({
+        id : zod.string(),
     })
 
     // below code is tell the how to expost the files 
