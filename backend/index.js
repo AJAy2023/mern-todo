@@ -3,10 +3,10 @@ const { createTodo, updateTodo } = require('./types');
 const { todo } = require('./db');
 const app = express();
 const port = 3000;
-
+const cors = require('cors');
 // Middleware to parse JSON request body
 app.use(express.json());
-
+app.use(cors())
 // Route to create a new todo
 app.post('/todo', async function (req, res) {
     try {
